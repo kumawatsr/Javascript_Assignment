@@ -1,0 +1,3 @@
+Q8. What are Web Workers in JavaScript, and how can they be used to perform multi-threaded tasks in the browser? Provide a scenario where Web Workers is beneficial. 
+
+=> Web Workers are a feature in JavaScript that enables multi-threaded execution in the browser. They allow developers to run background tasks concurrently in separate threads, freeing up the main thread for UI interactions and ensuring that time-consuming tasks do not block the user interface.

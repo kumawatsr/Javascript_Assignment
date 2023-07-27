@@ -1,0 +1,6 @@
+Memoization is an optimization technique used to speed up expensive function calls by caching their results. It involves storing the results of function calls based on their input arguments, so that if the function is called again with the same arguments, it can simply return the cached result instead of recomputing it. This can significantly reduce redundant computations and improve the overall performance of the application.
+Here's how memoization works:
+
+When a function is called with specific arguments, the memoization function first checks if the result for those arguments already exists in the cache (a data structure that stores previous function call results).
+If the result is found in the cache, the memoization function returns the cached result immediately, avoiding the computation of the function.
+If the result is not found in the cache, the function performs the expensive computation, stores the result in the cache for future use, and then returns the result.

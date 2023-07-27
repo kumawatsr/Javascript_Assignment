@@ -1,0 +1,34 @@
+Q5. What are the differences between document.querySelector, document.querySelectorAll, and document.getElementById? When would you prefer to use one over the others? 
+
+1. `document.querySelector`:
+   - Syntax: `document.querySelector(selector)`
+   - Returns: The first element that matches the specified CSS selector.
+   - Use: It is commonly used to select a single element from the DOM based on a CSS selector. The selector can be an element name, class name, ID, or a combination of these.
+
+2. `document.querySelectorAll`:
+   - Syntax: `document.querySelectorAll(selector)`
+   - Returns: A NodeList containing all elements that match the specified CSS selector.
+   - Use: It is used to select multiple elements from the DOM based on a CSS selector. The NodeList is similar to an array, but it does not have array methods directly available. You can convert it to an array using `Array.from()` or the spread operator.
+
+3. `document.getElementById`:
+   - Syntax: `document.getElementById(id)`
+   - Returns: The element with the specified ID attribute.
+   - Use: It is specifically used to select an element by its unique ID. IDs must be unique within the HTML document, so this method is suitable when you want to select a single element with a known ID.
+
+
+When to use one over the others:
+
+1. Use `document.querySelector` when:
+   - You want to select a single element based on a CSS selector.
+   - You need to use more complex selectors, such as combining classes, element names, or attribute selectors.
+   - You want to select the first occurrence of an element that matches the selector.
+
+2. Use `document.querySelectorAll` when:
+   - You want to select multiple elements that match a CSS selector.
+   - You need to perform an action on multiple elements simultaneously.
+
+3. Use `document.getElementById` when:
+   - You need to select an element based on its unique ID.
+   - You are sure that there will be only one element with the specified ID, as IDs must be unique in the document.
+
+Note :  `querySelector` and `querySelectorAll` are more powerful since they allow you to use any valid CSS selector, whereas `getElementById` can only select elements by their ID. 

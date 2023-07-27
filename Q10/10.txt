@@ -1,0 +1,19 @@
+Q10. What are Proxy objects in JavaScript, and how can they be used to intercept and customize fundamental operations on objects? Provide an example of how Proxies can be implemented. 
+
+Proxy objects in JavaScript are a powerful feature introduced in ECMAScript 6 (ES6) that allow you to intercept and customize fundamental operations on objects. A Proxy acts as a middleman between the code and the target object, enabling you to intercept and override various default behaviors associated with objects. With Proxies, you can customize property access, property assignment, function invocation, and more.
+
+The Proxy object is constructed using the Proxy constructor, which takes two arguments:
+
+target: The object to be proxied.
+
+handler: An object containing the proxy's behavior, with trap methods for various operations.
+
+Trap methods are special functions defined in the handler object. When you interact with the proxy (e.g., get a property, set a property, call a function), the corresponding trap method is called. Inside these trap methods, you can customize and control how the proxy behaves.
+
+Here are some reasons why you might choose to use proxies even when you can make direct changes to an object:
+
+Abstraction and Encapsulation: Proxies allow you to create an abstraction layer over an object, encapsulating its behavior and providing a cleaner, more maintainable interface. By using proxies, you can hide the complexity of how the object works internally, making the code more readable and easier to understand.
+
+Validation and Security: Proxies are helpful when you want to enforce validation rules or add security checks to certain properties of an object. You can prevent direct access to sensitive properties or ensure that only specific types of data can be assigned to certain properties.
+
+

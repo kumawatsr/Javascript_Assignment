@@ -1,0 +1,24 @@
+Q7. Explain the event loop in JavaScript and how it handles asynchronous tasks. Provide an example of a situation where the event loop is crucial for handling non-blocking I/O. 
+
+=>Source : https://www.youtube.com/watch?v=8zKuNo4ay8E&ab_channel=AkshaySaini
+
+The event loop is a critical mechanism in JavaScript that allows for asynchronous execution and non-blocking I/O operations. It ensures that JavaScript remains responsive to user interactions and can handle time-consuming tasks without blocking the main execution thread.
+
+Here's how the event loop works:
+
+1. Main Thread: JavaScript is single-threaded, meaning it executes code sequentially in a single main thread. This thread is responsible for executing the JavaScript code, handling UI interactions, and running other tasks.
+
+2. Asynchronous Tasks: Certain tasks in JavaScript, such as fetching data from a server, reading files, or setting timers, are inherently time-consuming and can cause the main thread to become unresponsive if executed synchronously. Instead, these tasks are offloaded to the browser's APIs, like XMLHttpRequest, Fetch API, or timers like `setTimeout` and `setInterval`.
+
+3. Callback Queue: When these asynchronous tasks complete, they are placed in the callback queue as events, along with their corresponding callback functions. The callback queue is a data structure that stores these events in the order they complete.
+
+4. Event Loop: The event loop continuously monitors the callback queue while the main thread is idle. When the main thread has finished executing the current task (e.g., a function call), it checks if there are any pending events in the callback queue.
+
+5. Execution of Callbacks: If there are events in the callback queue, the event loop dequeues and executes them one by one, invoking their associated callback functions. This process continues as long as there are events in the queue.
+
+6. Non-Blocking Behavior: Since the asynchronous tasks are handled separately from the main thread, the event loop ensures that time-consuming operations do not block the main thread, keeping the JavaScript code responsive and enabling the application to handle multiple tasks simultaneously.
+
+Here, GEC : The global execution context represents the environment in which the global JavaScript code is executed.
+It is the first and default execution context created when the JavaScript engine starts running your code.
+All code that is not inside any function is part of the global execution context.
+
